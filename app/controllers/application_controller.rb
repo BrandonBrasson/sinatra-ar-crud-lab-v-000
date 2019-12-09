@@ -45,4 +45,13 @@ class ApplicationController < Sinatra::Base
 
 
 
+
+
+  delete '/posts/:id/delete' do
+      @post = Post.find_by_id(params[:id])
+      @post.delete
+      erb :deleted #this is the line we are adding
+    end
+
+
 end
