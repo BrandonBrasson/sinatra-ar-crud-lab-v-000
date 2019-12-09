@@ -51,9 +51,9 @@ get ' /articles/:id/edit' do
 
 
 
-  delete '/posts/:id/delete' do
-      @post = Post.find_by_id(params[:id])
-      @post.delete
+  delete '/articles/:id/delete' do
+      @article = Article.find_by_id(params[:id])
+      @article.delete
       erb :deleted #this is the line we are adding
     end
 
